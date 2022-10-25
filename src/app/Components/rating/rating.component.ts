@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-rating',
+  templateUrl: './rating.component.html',
+  styleUrls: ['./rating.component.scss']
+})
+export class RatingComponent implements OnInit {
+  max = 5;
+  rate = 2;
+  isReadonly = false;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
