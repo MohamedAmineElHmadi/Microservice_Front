@@ -7,6 +7,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <== add the imports!
+import { MatSliderModule } from '@angular/material/slider';
 
 
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
@@ -43,12 +44,29 @@ import {HttpClientModule} from "@angular/common/http";
 import { UsersComponent } from './Components/users/users.component';
 import { ArticlesComponent } from './Components/articles/articles.component';
 import { ExamComponent } from './Components/exam/exam.component';
+import { RatingComponent } from './Components/rating/rating.component';
+import { FeedbackComponent } from './Components/feedback/feedback.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCardModule} from '@angular/material/card';
+import { RatingModule } from 'ngx-bootstrap/rating';
+
+
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatRadioModule,
+    MatCardModule,
+    MatSliderModule,
     AppRoutingModule,
+    RatingModule,
+    MatIconModule,
+    MatInputModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
     AppFooterModule,
@@ -70,6 +88,8 @@ import { ExamComponent } from './Components/exam/exam.component';
     UsersComponent,
     ArticlesComponent,
     ExamComponent,
+    RatingComponent,
+    FeedbackComponent,
   ],
   providers: [
     {

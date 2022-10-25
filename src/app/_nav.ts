@@ -25,8 +25,8 @@ export const navItems: INavData[] = [
     icon: 'icon-pencil'
   },
   {
-    name: 'Ratings',
-    url: '/theme/typography',
+    name: 'Rating',
+    url: '/rating',
     icon: 'icon-pencil'
   },
   {
@@ -47,6 +47,11 @@ export const navItems: INavData[] = [
   {
     name: 'Commande',
     url: '/theme/typography',
+    icon: 'icon-pencil'
+  },
+  {
+    name: 'Feedback',
+    url: '/feedback',
     icon: 'icon-pencil'
   }
 ];

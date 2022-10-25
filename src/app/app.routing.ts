@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ArticlesComponent } from './Components/articles/articles.component';
 import { ExamComponent } from './Components/exam/exam.component';
+import { FeedbackComponent } from './Components/feedback/feedback.component';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
+import { RatingComponent } from './Components/rating/rating.component';
 
 
 export const routes: Routes = [
@@ -54,7 +56,13 @@ export const routes: Routes = [
         component: ArticlesComponent},
         {
           path: 'exam',
-          component: ExamComponent}
+          component: ExamComponent},
+          {
+            path: 'feedback',
+            component: FeedbackComponent},
+            {
+              path: 'rating',
+              component: RatingComponent}
 
     ] 
   }

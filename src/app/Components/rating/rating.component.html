@@ -1,0 +1,29 @@
+
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Spring boot</mat-card-title>
+          <mat-card-subtitle>java</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://programadoresbrasil.com.br/wp-content/uploads/2021/05/Spring-BOOT-Interview-questions-1.jpg" alt="spring boot">
+        <mat-card-content>
+          <p>
+            Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+        <rating  style="color: #0275d8;font-size: 40px;" [(ngModel)]="rate" [max]="max" [readonly]="isReadonly">
+        </rating>
+          <pre >
+            Rate: <b>{{rate}}</b>
+          </pre>
+      </mat-card>
+     
+    
+
+
+
+  
