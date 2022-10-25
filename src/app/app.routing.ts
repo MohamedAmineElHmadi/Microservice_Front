@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ArticlesComponent } from './Components/articles/articles.component';
+import { ExamComponent } from './Components/exam/exam.component';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
@@ -10,6 +12,7 @@ export const routes: Routes = [
   {
     path: '',
     component: DefaultLayoutComponent,
+  
     data: {
       title: 'Home'
     },
@@ -45,9 +48,18 @@ export const routes: Routes = [
       {
         path: 'widgets',
         loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
-      }
-    ]
+      },
+      {
+        path: 'article',
+        component: ArticlesComponent},
+        {
+          path: 'exam',
+          component: ExamComponent}
+
+    ] 
   }
+ 
+ 
 ];
 
 @NgModule({

@@ -1,0 +1,36 @@
+
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of Articles">
+        <td>{{a.title}}</td>
+        <td>{{a.description}}</td>
+        <td> <button class="btn btn-outline-danger"(click)="delete(a.id)">Delete</button></td> 
+      </tr>
+    </tbody>
+</table>
+
+    <div class="form-inputs clearfix">
+        <p><label for="ue-libelle">Article  title<span class="required" style="color:red"> *</span></label>
+          <input type="text" [(ngModel)]="article.title"  id="article-title" name="article-title" 
+          class="form-control the-title" placeholder="Enter the article title.."  autocomplete="off">
+          <i class="icon-chat"></i>
+          <span class="form-description">Please enter the article title.</span></p>
+               
+        </div>
+        <div class="form-inputs clearfix">
+            <p><label for="ue-libelle">Article description<span class="required" style="color:red"> *</span></label>
+              <input type="text" [(ngModel)]="article.description"  id="article-description" name="article-description" 
+              class="form-control the-title" placeholder="Enter the article description.."  autocomplete="off">
+              <i class="icon-chat"></i>
+              <span class="form-description">Please enter the article description.</span></p>    
+         </div>
+                <input type="submit" class="btn btn-sm btn-primary" (click)=" postArticle()">
+    </div>

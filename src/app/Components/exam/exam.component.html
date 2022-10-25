@@ -1,0 +1,39 @@
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Subject</th>
+            <th>nbr of Question</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let a of exams">
+            <td>{{a.title}}</td>
+            <td>{{a.subject}}</td>
+            <td>{{a.nbQuestion}}</td>
+
+            <td> <button class="btn btn-outline-danger"(click)="delete(a.id)">Delete</button></td> 
+          </tr>
+        </tbody>
+    </table>
+    
+        <div class="form-inputs clearfix">
+            <p><label for="ue-libelle">Exam  title<span class="required" style="color:red"> *</span></label>
+              <input type="text" [(ngModel)]="exam.title"  id="Exam-title" name="Exam-title" 
+              class="form-control the-title" placeholder="Enter the Exam title.."  autocomplete="off">
+              <i class="icon-chat"></i>
+              <span class="form-description">Please enter the Exam title.</span></p>
+                   
+            </div>
+            <div class="form-inputs clearfix">
+                <p><label for="ue-libelle">Exam description<span class="required" style="color:red"> *</span></label>
+                  <input type="text" [(ngModel)]="exam.subject"  id="Exam-description" name="Exam-description" 
+                  class="form-control the-title" placeholder="Enter the Exam description.."  autocomplete="off">
+                  <i class="icon-chat"></i>
+                  <span class="form-description">Please enter the Exam description.</span></p>    
+             </div>
+                    <input type="submit" class="btn btn-sm btn-primary" (click)=" postExam()">
+        </div>

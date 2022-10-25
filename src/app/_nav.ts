@@ -21,7 +21,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Articles',
-    url: '/theme/typography',
+    url: '/article',
     icon: 'icon-pencil'
   },
   {
